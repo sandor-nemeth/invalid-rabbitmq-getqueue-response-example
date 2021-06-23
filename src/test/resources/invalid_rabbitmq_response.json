@@ -1,0 +1,135 @@
+{
+  "consumer_details": [
+    {
+      "arguments": {},
+      "channel_details": {
+        "connection_name": "1.1.1.1:50676 -> 1.1.1.1:5672",
+        "name": "1.1.1.1:50676 -> 1.1.1.1:5672 (14)",
+        "node": "anode1",
+        "number": 14,
+        "peer_host": "1.1.1.1",
+        "peer_port": "undefined",
+        "user": "user"
+      },
+      "ack_required": true,
+      "active": true,
+      "activity_status": "up",
+      "consumer_tag": "amq.ctag-CWD7jFrU5cGCq3X7GFtU0w",
+      "exclusive": false,
+      "prefetch_count": 250,
+      "queue": {
+        "name": "aqueue",
+        "vhost": "/"
+      }
+    }
+  ],
+  "arguments": {
+    "x-dead-letter-exchange": "dlx",
+    "x-dead-letter-routing-key": "aqueue",
+    "x-queue-type": "quorum"
+  },
+  "auto_delete": false,
+  "consumer_capacity": 0.7567119786014666,
+  "consumer_utilisation": 0.7567119786014666,
+  "consumers": 1,
+  "deliveries": [],
+  "durable": true,
+  "effective_policy_definition": {
+    "max-in-memory-length": 1000
+  },
+  "exclusive": false,
+  "garbage_collection": {
+    "fullsweep_after": 65535,
+    "max_heap_size": 0,
+    "min_bin_vheap_size": 46422,
+    "min_heap_size": 233,
+    "minor_gcs": 221
+  },
+  "incoming": [],
+  "leader": "anode1",
+  "members": [
+    "anode1",
+    "anode2",
+    "anode3"
+  ],
+  "memory": 1116804,
+  "message_bytes": 0,
+  "message_bytes_persistent": 0,
+  "message_bytes_ram": 0,
+  "message_bytes_ready": 0,
+  "message_bytes_unacknowledged": 0,
+  "message_stats": {
+    "ack": 434072,
+    "ack_details": {
+      "rate": 0.0
+    },
+    "deliver": 788020,
+    "deliver_details": {
+      "rate": 0.0
+    },
+    "deliver_get": 788020,
+    "deliver_get_details": {
+      "rate": 0.0
+    },
+    "deliver_no_ack": 0,
+    "deliver_no_ack_details": {
+      "rate": 0.0
+    },
+    "get": 0,
+    "get_details": {
+      "rate": 0.0
+    },
+    "get_empty": 0,
+    "get_empty_details": {
+      "rate": 0.0
+    },
+    "get_no_ack": 0,
+    "get_no_ack_details": {
+      "rate": 0.0
+    },
+    "publish": 658777,
+    "publish_details": {
+      "rate": 0.0
+    },
+    "redeliver": 1000,
+    "redeliver_details": {
+      "rate": 0.0
+    }
+  },
+  "messages": 0,
+  "messages_details": {
+    "rate": 0.0
+  },
+  "messages_persistent": 0,
+  "messages_ram": 0,
+  "messages_ready": 0,
+  "messages_ready_details": {
+    "rate": 0.0
+  },
+  "messages_unacknowledged": 0,
+  "messages_unacknowledged_details": {
+    "rate": 0.0
+  },
+  "name": "aqueue",
+  "node": "anode1",
+  "online": [
+    "anode1",
+    "anode2",
+    "anode3"
+  ],
+  "open_files": {
+    "rabbit@ip-10-0-10-245.eu-central-1.compute.internal": 0,
+    "rabbit@ip-10-0-10-97.eu-central-1.compute.internal": 0,
+    "rabbit@ip-10-0-11-99.eu-central-1.compute.internal": 0
+  },
+  "operator_policy": null,
+  "policy": "LimitAll",
+  "reductions": 3169842377,
+  "reductions_details": {
+    "rate": 90.6
+  },
+  "single_active_consumer_ctag": null,
+  "state": "running",
+  "type": "quorum",
+  "vhost": "/"
+}
