@@ -4,11 +4,10 @@ import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.WireMock;
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
 import com.rabbitmq.http.client.Client;
+import com.rabbitmq.http.client.CustomRabbitClient;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ContextConfiguration;
 
 import java.net.URI;
 import java.nio.file.Files;
@@ -29,7 +28,7 @@ class InvalidRabbitmqGetQueueResponseExampleApplicationTests {
         wireMockServer = new WireMockServer(WireMockConfiguration.options().dynamicPort());
         wireMockServer.start();
 
-        clientUnderTest = new Client("http://localhost:" + wireMockServer.port() + "/", "user", "password");
+        clientUnderTest = new CustomRabbitClient("http://localhost:" + wireMockServer.port() + "/", "user", "password");
     }
 
     @AfterEach
@@ -55,6 +54,5 @@ class InvalidRabbitmqGetQueueResponseExampleApplicationTests {
         URI responseUri = Objects.requireNonNull(getClass().getResource("/invalid_rabbitmq_response.json")).toURI();
         return Files.readAllBytes(Paths.get(responseUri));
     }
-
 
 }
